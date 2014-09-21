@@ -12,6 +12,8 @@ if DotaFusions == nil then
 end
 
 require( "dotafusions_eventHandlers" )
+require( "helpers" )
+
 
 
 --------------------------------------------------------------------------------
@@ -26,6 +28,11 @@ function Precache( context )
     -- other heroes, its necessary to load them here.
     PrecacheResource( "particle_folder", "particles/units/heroes/", context )
     
+    --PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts", context )
+    --PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts", context )
+    
+   
+  
     -- Have not found a more efficient or simpler way of making sure fused heroes play appropriate sounds.
     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts", context ) -- 1
     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts", context ) -- 2
@@ -89,53 +96,52 @@ function Precache( context )
     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts", context ) -- 60
     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_broodmother.vsndevts", context ) -- 61
     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts", context ) -- 62
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_weaver.vsndevts", context ) -- 63
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_jakiro.vsndevts", context ) -- 64
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_batrider.vsndevts", context ) -- 65
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_chen.vsndevts", context ) -- 66
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_spectre.vsndevts", context ) -- 67
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_doombringer.vsndevts", context ) -- 68
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_ancient_apparition.vsndevts", context ) -- 69
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_ursa.vsndevts", context ) -- 70
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_spirit_breaker.vsndevts", context ) -- 71
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_gyrocopter.vsndevts", context ) -- 72
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_alchemist.vsndevts", context ) -- 73
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_invoker.vsndevts", context ) -- 74
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_silencer.vsndevts", context ) -- 75
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_obsidian_destroyer.vsndevts", context ) -- 76
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_lycan.vsndevts", context ) -- 77
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_brewmaster.vsndevts", context ) -- 78
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_shadow_demon.vsndevts", context ) -- 79
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_lone_druid.vsndevts", context ) -- 80
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_chaos_knight.vsndevts", context ) -- 81
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_meepo.vsndevts", context ) -- 82
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_treant.vsndevts", context ) -- 83
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_ogre_magi.vsndevts", context ) -- 84
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_undying.vsndevts", context ) -- 85
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_rubick.vsndevts", context ) -- 86
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_disruptor.vsndevts", context ) -- 87
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_nyx_assassin.vsndevts", context ) -- 88
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_naga_siren.vsndevts", context ) -- 89
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_keeper_of_the_light.vsndevts", context ) -- 90
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_wisp.vsndevts", context ) -- 91
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_visage.vsndevts", context ) -- 92
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_slark.vsndevts", context ) -- 93
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_medusa.vsndevts", context ) -- 94
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_troll_warlord.vsndevts", context ) -- 95
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_centaur.vsndevts", context ) -- 96
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_magnataur.vsndevts", context ) -- 97
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_shredder.vsndevts", context ) -- 98
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_bristleback.vsndevts", context ) -- 99
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_tusk.vsndevts", context ) -- 100
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_skywrath_mage.vsndevts", context ) -- 101
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_elder_titan.vsndevts", context ) -- 102
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_legion_commander.vsndevts", context ) -- 103
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_ember_spirit.vsndevts", context ) -- 104
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_earth_spirit.vsndevts", context ) -- 105
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_terrorblade.vsndevts", context ) -- 107
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_phoenix.vsndevts", context ) -- 108
-    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_hero_oracle.vsndevts", context ) -- 109
-    
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_weaver.vsndevts", context ) -- 63
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_jakiro.vsndevts", context ) -- 64
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_batrider.vsndevts", context ) -- 65
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_chen.vsndevts", context ) -- 66
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts", context ) -- 67
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts", context ) -- 68
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts", context ) -- 69
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts", context ) -- 70
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_spirit_breaker.vsndevts", context ) -- 71
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts", context ) -- 72
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts", context ) -- 73
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts", context ) -- 74
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts", context ) -- 75
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_obsidian_destroyer.vsndevts", context ) -- 76
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts", context ) -- 77
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_brewmaster.vsndevts", context ) -- 78
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_shadow_demon.vsndevts", context ) -- 79
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_lone_druid.vsndevts", context ) -- 80
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts", context ) -- 81
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts", context ) -- 82
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_treant.vsndevts", context ) -- 83
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_ogre_magi.vsndevts", context ) -- 84
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_undying.vsndevts", context ) -- 85
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_rubick.vsndevts", context ) -- 86
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts", context ) -- 87
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_nyx_assassin.vsndevts", context ) -- 88
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_naga_siren.vsndevts", context ) -- 89
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_keeper_of_the_light.vsndevts", context ) -- 90
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_wisp.vsndevts", context ) -- 91
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_visage.vsndevts", context ) -- 92
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_slark.vsndevts", context ) -- 93
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts", context ) -- 94
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_troll_warlord.vsndevts", context ) -- 95
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts", context ) -- 96
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts", context ) -- 97
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts", context ) -- 98
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_bristleback.vsndevts", context ) -- 99
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_tusk.vsndevts", context ) -- 100
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_skywrath_mage.vsndevts", context ) -- 101
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_elder_titan.vsndevts", context ) -- 102
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts", context ) -- 103
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_ember_spirit.vsndevts", context ) -- 104
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_earth_spirit.vsndevts", context ) -- 105
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts", context ) -- 107
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts", context ) -- 108
+    PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_oracle.vsndevts", context ) -- 109
     
 end
 
@@ -164,6 +170,9 @@ function DotaFusions:InitGameMode()
 
   -- Register Game Events  
   Convars:RegisterCommand( "PlayerChoseFusionHero", function(...) return self:_PlayerChoseFusionHero( ... ) end, "Player has selected fusion hero", 0 )
+  Convars:RegisterCommand( "PlayerSendFusionAbilityRequest", function(...) return self:_PlayerSendFusionAbilityRequest( ... ) end, "Player has sent a fusion ability request", 0 )
+  
+  
   
   -- Add Event Handlers
   DotaFusionsEvents.AddEventHandlers(DotaFusions)
@@ -173,10 +182,26 @@ function DotaFusions:InitGameMode()
   
 end
 
+replacedPlayerHero = true
+
 --------------------------------------------------------------------------------
 -- MAIN THINK
 --------------------------------------------------------------------------------
 function DotaFusions:GameThink()
+
+    if GameRules:GetGameTime() > 10 and replacedPlayerHero then
+    
+         Msg("Pizza Time!")
+         
+       
+         hero = PlayerResource:GetPlayer(0):GetAssignedHero()
+   
+         
+         replacedPlayerHero = false
+         
+         PlayerResource:GetPlayer(0):GetAssignedHero():AddExperience(100000, false)
+     
+     end
 
   return 0.25
   
@@ -191,33 +216,279 @@ function DotaFusions:SetupFusion(localPlayer, fusionHero)
     local mainHero = localPlayer:GetAssignedHero()
     localPlayer.df_fusionHero1 = fusionHero
     
-    
-
-    print("Current Hero Fusion: ".. mainHero:GetUnitName() .. " | " .. fusionHero)
-    
     heroAbilities = LoadKeyValues( "scripts/fusionKVs/heroAbilities.txt")
     
-    if heroAbilities[mainHero:GetUnitName()] then
-    
-        tprint(heroAbilities)
-      
+    if heroAbilities[fusionHero] then   
+        print("Player has selected valid fusion hero: " .. fusionHero)
+    else
+        print("Player has not selected valid fusion hero: " .. fusionHero)
+        localPlayer.df_fusionHero1 = nil
     end
     
 
 end
 
+function DotaFusions:ProcessAbilityRequest(localPlayer, ability1, ability2, ability3, ability4, ability5, ability6)
 
-function tprint (tbl, indent)
-  if not indent then indent = 0 end
-  for k, v in pairs(tbl) do
-    formatting = string.rep("  ", indent) .. k .. ": "
-    if type(v) == "table" then
-      print(formatting)
-      tprint(v, indent+1)
-    else
-      print(formatting .. v)
+    local mainHero = localPlayer:GetAssignedHero()
+    local fusionHero = localPlayer.df_fusionHero1
+    
+    local heroAbilities = LoadKeyValues( "scripts/fusionKVs/heroAbilities.txt")
+    
+    local validAbis = {}
+    local abiTable = {}
+    
+    local counter = 0   
+    
+    print(ability1)
+    print(ability2)
+    print(ability3)
+    print(ability4)
+    print(ability5)
+    print(ability6)
+    
+    if ability1 then counter = counter + 1; validAbis[counter] = ability1;  end
+    if ability2 then counter = counter + 1; validAbis[counter] = ability2;  end
+    if ability3 then counter = counter + 1; validAbis[counter] = ability3;  end
+    if ability4 then counter = counter + 1; validAbis[counter] = ability4;  end
+    if ability5 then counter = counter + 1; validAbis[counter] = ability5;  end
+    if ability6 then counter = counter + 1; validAbis[counter] = ability6;  end
+    
+    print(counter)
+    
+    for i = 1, counter do  
+ 
+        local abi, info = GetAbilityInfo(validAbis[i], heroAbilities, mainHero:GetUnitName(), fusionHero)    
+        abiTable[i] = {name = abi, content = info}       
+    
     end
-  end
+
+    
+    for i, v in ipairs(abiTable) do
+    
+        if v.name == nil then print("Invalid ability fusion: Offending ability = " .. v.content); return end
+    
+    end
+        
+    if CheckForRequiredOptionalsAndIndexAbilities(abiTable) then print("missing abilities") return end
+        
+    ClearCurrentHeroAbilities(mainHero)
+    
+    for i, v in ipairs(abiTable) do
+    
+        ProcessAbilityIntoHero(i, v, mainHero)
+    
+    end    
+    
+    for i = 0, 15 do    
+      
+        local currentAbi = mainHero:GetAbilityByIndex(i)       
+        if currentAbi then
+            print(currentAbi:GetAbilityName())  
+        else
+            print("nil")
+        end
+    end
+  
+end
+
+function GetAbilityInfo(ability, kvTable, ...)
+    
+    for k,v in orderedPairs{...} do    
+       
+        if kvTable[v][ability] then       
+            return ability, kvTable[v][ability]     
+        end   
+        
+    end
+    
+    return nil, ability
+
+end
+
+function ProcessAbilityIntoHero(abilityIndex, abilityInfo, hero)
+          
+   hero:AddAbility(abilityInfo.name)
+       
+    if type(abilityInfo.content) == "table" then
+
+        for k,v in pairs(abilityInfo.content) do
+       
+            if k == "PairedWithHidden" then
+        
+                AddAbilities(v, hero)
+        
+            end      
+        end     
+    end
+end
+
+function AddAbilities(table, hero)
+
+    for k,v in orderedPairs(table) do 
+        
+        if hero:HasAbility(k) == false then
+        
+            hero:AddAbility(k)
+            
+        end
+    end
+end
+
+function ClearCurrentHeroAbilities(hero)
+
+    
+    print("Current Hero abilities before reset")
+    
+    --[[
+    for i = 0, 15 do       
+        currentAbi = hero:GetAbilityByIndex(i)       
+        
+        if currentAbi then                   
+            print(currentAbi:GetAbilityName() .. " :" .. i)            
+        else
+            print("nil :" .. i)
+        end
+    end
+    ]]
+
+    for i = 0, 12 do   
+           
+        currentAbi = hero:GetAbilityByIndex(i)   
+        if currentAbi then
+            
+            if currentAbi:GetAbilityName() == "visage_soul_assumption" then           
+  
+            elseif currentAbi:GetAbilityName() == "ember_spirit_fire_remnant" then            
+            
+            elseif currentAbi:GetAbilityName() == "meepo_divided_we_stand" then            
+
+            else
+             
+                hero:RemoveAbility(currentAbi:GetAbilityName())  
+            
+            end
+        end
+    end
+    
+    --[[
+    print("Current Hero abilities after reset")
+    
+       for i = 0, 15 do      
+        currentAbi = hero:GetAbilityByIndex(i)       
+        if currentAbi then
+            print(currentAbi:GetAbilityName())  
+        else
+            print("nil")
+        end
+    end
+    ]]
+    
+end
+
+function CheckForRequiredOptionalsAndIndexAbilities(abilityTable)
+
+    requiredMissing = {}
+    requiredOptionalsMissing = {}
+    pairedIndexMissing = {}
+    returnFailure = false
+
+    if abilityTable == nil then print("ability table is nil") return true end
+
+    -- Iterate through all abilities
+    for i, v in ipairs(abilityTable) do
+    
+        -- If the ability info (v) is a table then check table key
+        if type(v.content) == "table" then
+        
+            -- Iterate through all keys in the table, checking for Required, RequiredOptionals, and PairedWithIndexSpecific
+            for key,value in pairs(v.content) do
+           
+                if key == "Required" then
+            
+                    for rKey, rValue in pairs(value) do
+                    
+                        if abilityTable[rKey] == false then table.insert(requiredMissing, rKey); returnFailure = true;  end
+                    
+                    end
+                    
+                elseif key == "RequiredOptionals" then   
+                
+                 local foundAtLeastOne = false
+                           
+                    for rKey, rValue in pairs(value) do
+                    
+                        if abilityTable[rKey] == false then table.insert(requiredOptionalsMissing, rKey) else foundAtLeastOne = true  end
+                    
+                    end
+                    
+                    if foundAtLeastOne == false then returnFailure = true end
+                    
+                elseif key == "PairedWithIndexSpecific" then                   
+                
+                     local counter = 1
+                     local missingIndex = false
+                     
+                     print("Ability has Paired with index requirement")
+                
+                     for rKey, rValue in pairs(value) do
+                    
+                        for iIndex, iValue in ipairs(abilityTable) do
+                            
+                            print(tostring(counter .. " - ") .. "A1 - "  .. rKey .. " : " .. rValue)
+                            print(tostring(counter .. " - ") .. "A2 - " .. iIndex .. " : " .. iValue.name)
+                        
+                            if counter == tonumber(rKey) then print("Found Matching key") if iValue.name ~= rValue then table.insert(pairedIndexMissing, rValue); print("Index Mismatch")  returnFailure = true; end end
+                        
+                            counter = counter + 1
+                        end
+                        
+                        if tonumber(rKey) > counter then
+                        
+                        returnFailure = true
+                        print("Could not find ability: " .. rValue .. " at index" .. rKey)
+                        table.insert(pairedIndexMissing, rValue)
+                        
+                        end
+                        
+                        counter = 1
+                    
+                    end
+                    
+                    
+                 
+                end      
+            end     
+        end  
+    end
+    
+    if returnFailure then
+    
+        print("Required Missing: ")
+        tprint(requiredMissing)
+        
+        print("Required Optionals Missing: ")
+        tprint(requiredOptionalsMissing)
+        
+        print("Paired With Index Specific Missing: ")
+        tprint(pairedIndexMissing)
+    
+    end
+    
+    return returnFailure
+    
+end
+
+function AbilityTableContains(ability, table)
+
+    for k, v in pairs(table) do
+    
+      if k == ability then return true end
+        
+    end
+    
+    return false
+
 end
 
 --------------------------------------------------------------------------------
@@ -296,5 +567,168 @@ function UpdateInvokeSpellLevels(self)
 
     return nil
 end
+
+
+--------------------------------------------------------------------------------
+-- SPECIAL CASE ABILITY EVENT HANDLERS
+--------------------------------------------------------------------------------
+
+-- Ember Spirit Fire Remnant Show hidden ability
+function ShowFireRemantHidden(keys)
+
+    local player = EntIndexToHScript(keys.caster_entindex)
+    
+    for i = 0, 16 do
+    
+        if player:GetAbilityByIndex(i) ~= nil then
+          
+            local ability = player:GetAbilityByIndex(i)
+            
+            if ability:GetName() == "ember_spirit_fire_remnant" then
+                
+                ability:SetHidden(false)
+                
+                local index = keys.ability:GetAbilityIndex()
+                
+                player:RemoveAbility(keys.ability:GetName())
+                
+                ability:SetAbilityIndex(index)
+                ability:UpgradeAbility()          
+            end
+        end
+    end
+end
+
+-- Visage Soul Assumption Show hidden ability
+function ShowSoulAssumptionHidden(keys)
+
+    -- Get Hero
+    local player = EntIndexToHScript(keys.caster_entindex)
+    
+    for i = 0, 16 do
+    
+        if player:GetAbilityByIndex(i) ~= nil then
+          
+            local ability = player:GetAbilityByIndex(i)
+            
+            if ability:GetName() == "visage_soul_assumption" then
+                
+                ability:SetHidden(false)
+                
+                local index = keys.ability:GetAbilityIndex()
+                
+                player:RemoveAbility(keys.ability:GetName())
+                
+                ability:SetAbilityIndex(index)
+                ability:UpgradeAbility()          
+            end
+        end
+    end
+end
+
+-- Adds the invoker spells via dummy invoke ability while real invoke is hidden
+function AddInvokerSpell(keys)
+  
+    -- Get Hero
+    local playerHero = EntIndexToHScript(keys.caster_entindex)  
+    -- Get the empty containers
+    local invokerEmpty1 = playerHero:FindAbilityByName("invoker_empty1")
+    local invokerEmpty2 = playerHero:FindAbilityByName("invoker_empty2")
+    -- In case we are cycling an ability out of a container, then store a refernce so we can remove it
+    local spellToRemove = nil
+  
+    -- Count the number of instances of invoker mods to find out which ability to add
+    local quasCount = CountNumOfModsAndRemoveThem(playerHero, "modifier_invoker_quas_instance")
+    local wexCount = CountNumOfModsAndRemoveThem(playerHero, "modifier_invoker_wex_instance") * 10
+    local exortCount = CountNumOfModsAndRemoveThem(playerHero, "modifier_invoker_exort_instance") * 100
+    
+    -- Using the counts, find out the ability we are supposed to add
+    spellToUse = ChooseInvokerSpellBasedOnInstanceCalc(quasCount + wexCount + exortCount)
+ 
+    -- We have a valid spell
+    if spellToUse then
+        
+        -- If we don't already have that ability then add it, if not, lets not do anything else
+        -- ====================================================================================
+        if playerHero:FindAbilityByName(spellToUse) == nil then
+                
+            -- Add the ability
+            playerHero:AddAbility(spellToUse) 
+            -- If the first empty container already has an ability
+            if invokerEmpty1:GetContext("SpellInUse") then
+                -- If the second empty container also contains an ability
+                if invokerEmpty2:GetContext("SpellInUse") then
+                    -- Set to remove the ability stored in the second container since we are about tho shift it out
+                    spellToRemove = invokerEmpty2:GetContext("SpellInUse")
+                  
+                end
+                -- Set the ability from the first container to be registered in the second container since its about to be moved there       
+                invokerEmpty2:SetContext("SpellInUse", invokerEmpty1:GetContext("SpellInUse"), 0)
+            
+            end
+          
+            -- Register the ability we just added to the first container
+            invokerEmpty1:SetContext("SpellInUse", spellToUse, 0)
+            -- Upgrade the ability we just added so that it can be used
+            playerHero:FindAbilityByName(spellToUse):UpgradeAbility()
+            -- Get a reference to the ability that got moved to the second container
+            local secondAbi = invokerEmpty2:GetContext("SpellInUse")
+            -- Remmoved and added so that it can reset.  We are re-sending the upgrade callbacks so that they can match properly
+            if secondAbi then 
+                playerHero:RemoveAbility(secondAbi) 
+                playerHero:AddAbility(secondAbi) 
+                playerHero:FindAbilityByName(secondAbi):UpgradeAbility() 
+            end
+                   
+          -- EXECUTES THE INVOKE ABILITY
+          -- *********************************************************
+          playerHero:FindAbilityByName("invoker_invoke"):CastAbility()  
+          -- *********************************************************
+          
+          -- Removes the ability that got moved out of the containers
+          if spellToRemove then 
+              playerHero:RemoveAbility(spellToRemove)
+          end
+          
+          -- Set up a think function so that we can call the upgrade callbacks on a subsequent loop
+          -- This is because doing it on the same loop was not working.
+          playerHero:SetThink("UpdateInvokeSpellLevels", self, 0.1)
+          
+          -- ==================================================================================== 
+        end          
+    end
+end
+
+-- Ogre Magi Unrefined Fireblast Item Confirmation Addition Thinker
+function CheckForScepter(keys)
+
+    local player = EntIndexToHScript(keys.caster_entindex)
+    
+    -- Stop thinker if the multicast ability is removed
+    if player:HasAbility("ogre_magi_multicast") == false then
+        return nil
+    end
+    
+    local hasScepter = player:HasItemInInventory("item_ultimate_scepter")
+    
+    if hasScepter then
+    
+        local ability = player:FindAbilityByName("ogre_magi_unrefined_fireblast")
+        
+        if ability and ability:IsHidden() then
+            
+            ability:SetHidden(false)
+            ability:UpgradeAbility()
+
+            player:RemoveAbility("fusion_ogre_magi_unrefined_fireblast_listener")
+            return nil
+        end
+    end
+end
+
+
+
+
+
 
 

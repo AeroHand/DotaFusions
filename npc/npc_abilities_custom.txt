@@ -64,7 +64,7 @@
 		{
 			"RunScript"
 			{				
-				"ScriptFile"		"scripts/vscripts/dotafusions_eventHandlers.lua"
+				"ScriptFile"		"scripts/vscripts/addon_game_mode.lua"
 				"Function"			"ShowFireRemantHidden"
 			}
 		}
@@ -99,7 +99,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile" 	"scripts/vscripts/dotafusions_eventHandlers.lua"
+						"ScriptFile" 	"scripts/vscripts/addon_game_mode.lua"
 						"Function"		"CheckForScepter"
 					}
 				}
@@ -148,7 +148,7 @@
 		{
 			"RunScript"
 			{
-				"ScriptFile" 	"scripts/vscripts/dotafusions_eventHandlers.lua"	
+				"ScriptFile" 	"scripts/vscripts/addon_game_mode.lua"	
 				"Function"		"AddInvokerSpell"
 			}
 		}		
@@ -169,7 +169,7 @@
 		{
 			"RunScript"
 			{				
-				"ScriptFile"		"scripts/vscripts/dotafusions_eventHandlers.lua"
+				"ScriptFile"		"scripts/vscripts/addon_game_mode.lua"
 				"Function"			"ShowSoulAssumptionHidden"
 			}
 		}

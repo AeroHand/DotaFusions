@@ -13,6 +13,7 @@ end
 -- Adds all the event handlers to the supplied table, Used for the DotaFusions GameMode
 function DotaFusionsEvents.AddEventHandlers(gMode)
 
+----------------------------------------------------------------------------------------------------------------------------
       function gMode:_PlayerChoseFusionHero(cmdName, hero1, hero2)
           
           -- Add fusion hero selection to player who called        
@@ -25,12 +26,23 @@ function DotaFusionsEvents.AddEventHandlers(gMode)
           
           else
               print( "either the player already has a fusion hero, or player has not selected a main hero" )
-          end
+          end      
+      end
+----------------------------------------------------------------------------------------------------------------------------      
+      function gMode:_PlayerSendFusionAbilityRequest(cmdName, ability1, ability2, ability3, ability4, ability5, ability6)
       
+          -- Add fusion hero selection to player who called        
+          local player = Convars:GetDOTACommandClient()
           
-          --print( "trace command Name : " .. cmdName )
-          --print( "trace hero1 arg : " .. hero1 )
-          --print( "trace hero2 arg : " .. hero2 )
+          -- If player has chosen his/her fusion hero and also has an main hero assigned, then try to process ability request
+          if player.df_fusionHero1 ~= nil and player:GetAssignedHero() ~= nil then
+              
+              gMode:ProcessAbilityRequest(player, ability1, ability2, ability3, ability4, ability5, ability6)
+          
+          else
+              print( "Player has not chosen a fusion hero. Can't process ability request")
+          end  
+      
       end
 
 end
@@ -104,12 +116,12 @@ function AddInvokerSpell(keys)
     local spellToRemove = nil
   
     -- Count the number of instances of invoker mods to find out which ability to add
-    local quasCount = CountNumOfModsAndRemoveThem(playerHero, "modifier_invoker_quas_instance")
-    local wexCount = CountNumOfModsAndRemoveThem(playerHero, "modifier_invoker_wex_instance") * 10
-    local exortCount = CountNumOfModsAndRemoveThem(playerHero, "modifier_invoker_exort_instance") * 100
+    local quasCount = GameRules:GetGameModeEntity():CountNumOfModsAndRemoveThem(playerHero, "modifier_invoker_quas_instance")
+    local wexCount = GameRules:GetGameModeEntity():CountNumOfModsAndRemoveThem(playerHero, "modifier_invoker_wex_instance") * 10
+    local exortCount = GameRules:GetGameModeEntity():CountNumOfModsAndRemoveThem(playerHero, "modifier_invoker_exort_instance") * 100
     
     -- Using the counts, find out the ability we are supposed to add
-    spellToUse = ChooseInvokerSpellBasedOnInstanceCalc(quasCount + wexCount + exortCount)
+    spellToUse = GameRules:GetGameModeEntity():ChooseInvokerSpellBasedOnInstanceCalc(quasCount + wexCount + exortCount)
  
     -- We have a valid spell
     if spellToUse then
@@ -162,6 +174,33 @@ function AddInvokerSpell(keys)
           
           -- ==================================================================================== 
         end          
+    end
+end
+
+-- Ogre Magi Unrefined Fireblast Item Confirmation Addition Thinker
+function CheckForScepter(keys)
+
+    local player = EntIndexToHScript(keys.caster_entindex)
+    
+    -- Stop thinker if the multicast ability is removed
+    if player:HasAbility("ogre_magi_multicast") == false then
+        return nil
+    end
+    
+    local hasScepter = player:HasItemInInventory("item_ultimate_scepter")
+    
+    if hasScepter then
+    
+        local ability = player:FindAbilityByName("ogre_magi_unrefined_fireblast")
+        
+        if ability and ability:IsHidden() then
+            
+            ability:SetHidden(false)
+            ability:UpgradeAbility()
+
+            player:RemoveAbility("fusion_ogre_magi_unrefined_fireblast_listener")
+            return nil
+        end
     end
 end
 
