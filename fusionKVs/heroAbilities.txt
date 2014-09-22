@@ -752,6 +752,8 @@
 				"5"							"doom_bringer_empty2"
 			}
 		}
+		"doom_bringer_empty1"				""
+		"doom_bringer_empty2"				""
 		"doom_bringer_scorched_earth"		""
 		"doom_bringer_lvl_death"			""
 		"doom_bringer_doom"					""
@@ -1002,6 +1004,8 @@
 				"5"							"rubick_empty2"
 			}
 		}
+		"rubick_empty1"						""
+		"rubick_empty2"						""
 	}	
 	//=================================================================================================================
 	// HERO: Disruptor - 87

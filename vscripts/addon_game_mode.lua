@@ -213,11 +213,13 @@ end
 
 function DotaFusions:SetupFusion(localPlayer, fusionHero)
     
+    -- Get Main Hero
     local mainHero = localPlayer:GetAssignedHero()
+    -- Set the Fusion Hero
     localPlayer.df_fusionHero1 = fusionHero
-    
+    -- Load the KV file
     heroAbilities = LoadKeyValues( "scripts/fusionKVs/heroAbilities.txt")
-    
+    -- If the fusion hero is valid then continue.  Else then set it to nil
     if heroAbilities[fusionHero] then   
         print("Player has selected valid fusion hero: " .. fusionHero)
     else
@@ -225,14 +227,19 @@ function DotaFusions:SetupFusion(localPlayer, fusionHero)
         localPlayer.df_fusionHero1 = nil
     end
     
-
 end
 
 function DotaFusions:ProcessAbilityRequest(localPlayer, ability1, ability2, ability3, ability4, ability5, ability6)
 
+    -- Get the Main Hero
     local mainHero = localPlayer:GetAssignedHero()
+    -- Get the fusion Hero
     local fusionHero = localPlayer.df_fusionHero1
     
+    
+    -- Check if hero is in fountain aura
+    if mainHero:HasModifier("modifier_fountain_aura_buff") == false then print("Not in Fountain") return end
+    -- Load Hero Abilities KV file
     local heroAbilities = LoadKeyValues( "scripts/fusionKVs/heroAbilities.txt")
     
     local validAbis = {}
@@ -247,6 +254,7 @@ function DotaFusions:ProcessAbilityRequest(localPlayer, ability1, ability2, abil
     print(ability5)
     print(ability6)
     
+    -- If the passed in ability is not nil, then add it to a table to later process
     if ability1 then counter = counter + 1; validAbis[counter] = ability1;  end
     if ability2 then counter = counter + 1; validAbis[counter] = ability2;  end
     if ability3 then counter = counter + 1; validAbis[counter] = ability3;  end
@@ -256,60 +264,59 @@ function DotaFusions:ProcessAbilityRequest(localPlayer, ability1, ability2, abil
     
     print(counter)
     
+    -- Get the ability info stored in the KV file
     for i = 1, counter do  
  
+        -- Checks to see if the abilities belong to either fusion or main hero
         local abi, info = GetAbilityInfo(validAbis[i], heroAbilities, mainHero:GetUnitName(), fusionHero)    
         abiTable[i] = {name = abi, content = info}       
     
     end
 
-    
+    -- Check to see if there are any abilities that are invalid.  If there are, then stop
     for i, v in ipairs(abiTable) do
     
         if v.name == nil then print("Invalid ability fusion: Offending ability = " .. v.content); return end
     
     end
         
+    -- Verify abilities who have special requirements.  Make sure they are valid, if not then stop
     if CheckForRequiredOptionalsAndIndexAbilities(abiTable) then print("missing abilities") return end
-        
+    -- Cleares the current Hero abilties.
     ClearCurrentHeroAbilities(mainHero)
-    
-    for i, v in ipairs(abiTable) do
-    
-        ProcessAbilityIntoHero(i, v, mainHero)
-    
+    -- Process and add all abilities in the ability table
+    for i, v in ipairs(abiTable) do   
+        ProcessAbilityIntoHero(i, v, mainHero)  
     end    
     
-    for i = 0, 15 do    
-      
-        local currentAbi = mainHero:GetAbilityByIndex(i)       
-        if currentAbi then
-            print(currentAbi:GetAbilityName())  
-        else
-            print("nil")
-        end
-    end
+    -- If there is space available, add attribute bonus
+    AddAttributeBonusIfAble(mainHero)
+    
   
 end
 
 function GetAbilityInfo(ability, kvTable, ...)
     
+    -- For every hero passed
     for k,v in orderedPairs{...} do    
        
+        -- If the ability name exists in the KV table for the specific hero, then return its info
         if kvTable[v][ability] then       
             return ability, kvTable[v][ability]     
         end   
         
     end
-    
+    -- If it doesn't exists, then return nil for its name and for its content, the ability name
     return nil, ability
 
 end
 
 function ProcessAbilityIntoHero(abilityIndex, abilityInfo, hero)
-          
+   
+   -- Adds the ability to the hero
    hero:AddAbility(abilityInfo.name)
-       
+    
+    -- If the content of the ability info is a table, then lets add other abilities
     if type(abilityInfo.content) == "table" then
 
         for k,v in pairs(abilityInfo.content) do
@@ -325,22 +332,31 @@ end
 
 function AddAbilities(table, hero)
 
+    -- For each ability in the table passed, add it to the hero if it doesn't have it already
     for k,v in orderedPairs(table) do 
         
         if hero:HasAbility(k) == false then
         
-            hero:AddAbility(k)
-            
+            hero:AddAbility(k)           
         end
+    end
+end
+
+function AddAttributeBonusIfAble(hero)
+
+    for i = 0, 12 do              
+            currentAbi = hero:GetAbilityByIndex(i)   
+            if currentAbi == nil then hero:AddAbility("attribute_bonus") return end
     end
 end
 
 function ClearCurrentHeroAbilities(hero)
 
+    --[[
     
     print("Current Hero abilities before reset")
     
-    --[[
+
     for i = 0, 15 do       
         currentAbi = hero:GetAbilityByIndex(i)       
         
@@ -352,9 +368,11 @@ function ClearCurrentHeroAbilities(hero)
     end
     ]]
 
+    -- For each index not currently occupied by the special hidden abilities
     for i = 0, 12 do   
            
         currentAbi = hero:GetAbilityByIndex(i)   
+        -- If the current index isn't null, then check to see it isn't one of the special abilities
         if currentAbi then
             
             if currentAbi:GetAbilityName() == "visage_soul_assumption" then           
@@ -364,7 +382,7 @@ function ClearCurrentHeroAbilities(hero)
             elseif currentAbi:GetAbilityName() == "meepo_divided_we_stand" then            
 
             else
-             
+                             
                 hero:RemoveAbility(currentAbi:GetAbilityName())  
             
             end
@@ -384,6 +402,10 @@ function ClearCurrentHeroAbilities(hero)
     end
     ]]
     
+    -- Reset players ability points
+    local currentLevel = hero:GetLevel()
+    hero:SetAbilityPoints(currentLevel)
+    
 end
 
 function CheckForRequiredOptionalsAndIndexAbilities(abilityTable)
@@ -391,8 +413,10 @@ function CheckForRequiredOptionalsAndIndexAbilities(abilityTable)
     requiredMissing = {}
     requiredOptionalsMissing = {}
     pairedIndexMissing = {}
+    -- Return value
     returnFailure = false
 
+    -- Make sure the passed ability table is not nil
     if abilityTable == nil then print("ability table is nil") return true end
 
     -- Iterate through all abilities
@@ -406,20 +430,16 @@ function CheckForRequiredOptionalsAndIndexAbilities(abilityTable)
            
                 if key == "Required" then
             
-                    for rKey, rValue in pairs(value) do
-                    
-                        if abilityTable[rKey] == false then table.insert(requiredMissing, rKey); returnFailure = true;  end
-                    
+                    for rKey, rValue in pairs(value) do                  
+                        if abilityTable[rKey] == false then table.insert(requiredMissing, rKey); returnFailure = true;  end                   
                     end
                     
                 elseif key == "RequiredOptionals" then   
                 
                  local foundAtLeastOne = false
                            
-                    for rKey, rValue in pairs(value) do
-                    
-                        if abilityTable[rKey] == false then table.insert(requiredOptionalsMissing, rKey) else foundAtLeastOne = true  end
-                    
+                    for rKey, rValue in pairs(value) do                 
+                        if abilityTable[rKey] == false then table.insert(requiredOptionalsMissing, rKey) else foundAtLeastOne = true  end                    
                     end
                     
                     if foundAtLeastOne == false then returnFailure = true end
@@ -428,40 +448,37 @@ function CheckForRequiredOptionalsAndIndexAbilities(abilityTable)
                 
                      local counter = 1
                      local missingIndex = false
-                     
-                     print("Ability has Paired with index requirement")
-                
+ 
+                     -- For ability index pair 
                      for rKey, rValue in pairs(value) do
                     
+                        -- Check against every ability in the ability table passed
                         for iIndex, iValue in ipairs(abilityTable) do
-                            
-                            print(tostring(counter .. " - ") .. "A1 - "  .. rKey .. " : " .. rValue)
-                            print(tostring(counter .. " - ") .. "A2 - " .. iIndex .. " : " .. iValue.name)
                         
+                            -- If the matching index doesn't match with the name
                             if counter == tonumber(rKey) then print("Found Matching key") if iValue.name ~= rValue then table.insert(pairedIndexMissing, rValue); print("Index Mismatch")  returnFailure = true; end end
                         
                             counter = counter + 1
                         end
                         
+                        -- If we simply don't have the index filled up with anything
                         if tonumber(rKey) > counter then
                         
-                        returnFailure = true
-                        print("Could not find ability: " .. rValue .. " at index" .. rKey)
-                        table.insert(pairedIndexMissing, rValue)
+                            returnFailure = true
+                            print("Could not find ability: " .. rValue .. " at index" .. rKey)
+                            table.insert(pairedIndexMissing, rValue)
                         
                         end
                         
                         counter = 1
                     
-                    end
-                    
-                    
-                 
+                    end                                
                 end      
             end     
         end  
     end
     
+    -- Error Messages
     if returnFailure then
     
         print("Required Missing: ")
