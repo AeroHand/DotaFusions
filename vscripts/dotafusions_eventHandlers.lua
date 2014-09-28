@@ -14,21 +14,24 @@ end
 function DotaFusionsEvents.AddEventHandlers(gMode)
 
 ----------------------------------------------------------------------------------------------------------------------------
+--
       function gMode:_PlayerChoseFusionHero(cmdName, hero1, hero2)
           
           -- Add fusion hero selection to player who called        
           local player = Convars:GetDOTACommandClient()
           
           -- If player has not chosen a fusion hero and has already chosen his main hero then lets setup the fusion
-          if player.df_fusionHero1 == nil and player:GetAssignedHero() ~= nil then
+          if player.df_fusionHero1 == nil then
               
               gMode:SetupFusion(player, hero1, hero2)
           
           else
-              print( "either the player already has a fusion hero, or player has not selected a main hero" )
+              print( "The player already has a fusion hero" )
           end      
       end
+      
 ----------------------------------------------------------------------------------------------------------------------------      
+--      
       function gMode:_PlayerSendFusionAbilityRequest(cmdName, ability1, ability2, ability3, ability4, ability5, ability6)
       
           -- Add fusion hero selection to player who called        
@@ -43,6 +46,5 @@ function DotaFusionsEvents.AddEventHandlers(gMode)
               print( "Player has not chosen a fusion hero. Can't process ability request")
           end  
       
-      end
-
+      end   
 end

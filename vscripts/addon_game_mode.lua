@@ -31,7 +31,7 @@ function Precache( context )
     --PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_gyrocopter.vsndevts", context )
     --PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts", context )
     
-   
+   PrecacheResource( "soundfile", "soundevents/game_sounds_hero_pick.vsndevts", context )
   
     -- Have not found a more efficient or simpler way of making sure fused heroes play appropriate sounds.
     PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts", context ) -- 1
@@ -154,7 +154,6 @@ function Activate()
     GameRules.DotaPvP_F:InitGameMode()
     
 end
-
 --------------------------------------------------------------------------------
 -- INIT
 --------------------------------------------------------------------------------
@@ -168,11 +167,11 @@ function DotaFusions:InitGameMode()
   -- Register Think
   GameMode:SetContextThink( "DotaPvP:GameThink", function() return self:GameThink() end, 0.25 )
 
+  GameRules:GetGameModeEntity():SetThink( "PopUpThink", self, "PopUpTimer", 2 )
+  
   -- Register Game Events  
   Convars:RegisterCommand( "PlayerChoseFusionHero", function(...) return self:_PlayerChoseFusionHero( ... ) end, "Player has selected fusion hero", 0 )
   Convars:RegisterCommand( "PlayerSendFusionAbilityRequest", function(...) return self:_PlayerSendFusionAbilityRequest( ... ) end, "Player has sent a fusion ability request", 0 )
-  
-  
   
   -- Add Event Handlers
   DotaFusionsEvents.AddEventHandlers(DotaFusions)
@@ -184,6 +183,24 @@ end
 
 replacedPlayerHero = true
 
+function DotaFusions:popupStart()
+                ShowGenericPopup( "#popup_title", "#popup_body", "", "", DOTA_SHOWGENERICPOPUP_TINT_SCREEN )
+end
+
+function DotaFusions:PopUpThink()
+        if GameRules:State_Get() == DOTA_GAMERULES_STATE_HERO_SELECTION then
+                self.popupStart()
+                return nil
+        end
+        return 1
+end
+
+function testPop()
+    
+    print("Popping")
+
+end
+
 --------------------------------------------------------------------------------
 -- MAIN THINK
 --------------------------------------------------------------------------------
@@ -193,13 +210,14 @@ function DotaFusions:GameThink()
     
          Msg("Pizza Time!")
          
+         --PlayerResource:SetHasRepicked(0)
        
-         hero = PlayerResource:GetPlayer(0):GetAssignedHero()
-   
+         --GameRules:ResetToHeroSelection()
+
          
          replacedPlayerHero = false
          
-         PlayerResource:GetPlayer(0):GetAssignedHero():AddExperience(100000, false)
+         --PlayerResource:GetPlayer(0):GetAssignedHero():AddExperience(100000, false)
      
      end
 
@@ -213,18 +231,22 @@ end
 
 function DotaFusions:SetupFusion(localPlayer, fusionHero)
     
-    -- Get Main Hero
-    local mainHero = localPlayer:GetAssignedHero()
     -- Set the Fusion Hero
     localPlayer.df_fusionHero1 = fusionHero
     -- Load the KV file
     heroAbilities = LoadKeyValues( "scripts/fusionKVs/heroAbilities.txt")
     -- If the fusion hero is valid then continue.  Else then set it to nil
     if heroAbilities[fusionHero] then   
-        print("Player has selected valid fusion hero: " .. fusionHero)
+    
+        print("Player has selected valid fusion hero: " .. fusionHero) 
+        -- Play sound when player has selected valid fusion hero     
+        EmitSoundOnClient("HeroPicker.Selected", localPlayer)
+        
     else
+    
         print("Player has not selected valid fusion hero: " .. fusionHero)
         localPlayer.df_fusionHero1 = nil
+        
     end
     
 end
@@ -342,6 +364,7 @@ function AddAbilities(table, hero)
     end
 end
 
+-- If the hero has space available for the attribute bonus skill, then add it.
 function AddAttributeBonusIfAble(hero)
 
     for i = 0, 12 do              
