@@ -176,6 +176,9 @@ function DotaFusions:InitGameMode()
   -- Add Event Handlers
   DotaFusionsEvents.AddEventHandlers(DotaFusions)
   
+    -- Add Listening Events
+  ListenToGameEvent("dota_player_pick_hero", DotaFusions._PlayerSpawned, self)
+  
   -- Modify Base Classes
   CDOTAPlayer.df_fusionHero1 = nil
   
@@ -233,6 +236,7 @@ function DotaFusions:SetupFusion(localPlayer, fusionHero)
     
     -- Set the Fusion Hero
     localPlayer.df_fusionHero1 = fusionHero
+    
     -- Load the KV file
     heroAbilities = LoadKeyValues( "scripts/fusionKVs/heroAbilities.txt")
     -- If the fusion hero is valid then continue.  Else then set it to nil
@@ -241,7 +245,7 @@ function DotaFusions:SetupFusion(localPlayer, fusionHero)
         print("Player has selected valid fusion hero: " .. fusionHero) 
         -- Play sound when player has selected valid fusion hero     
         EmitSoundOnClient("HeroPicker.Selected", localPlayer)
-        
+
     else
     
         print("Player has not selected valid fusion hero: " .. fusionHero)
@@ -258,11 +262,12 @@ function DotaFusions:ProcessAbilityRequest(localPlayer, ability1, ability2, abil
     -- Get the fusion Hero
     local fusionHero = localPlayer.df_fusionHero1
     
-    
+    print("trace 1")
     -- Check if hero is in fountain aura
     if mainHero:HasModifier("modifier_fountain_aura_buff") == false then print("Not in Fountain") return end
     -- Load Hero Abilities KV file
     local heroAbilities = LoadKeyValues( "scripts/fusionKVs/heroAbilities.txt")
+    print("trace 2")
     
     local validAbis = {}
     local abiTable = {}
@@ -276,6 +281,8 @@ function DotaFusions:ProcessAbilityRequest(localPlayer, ability1, ability2, abil
     print(ability5)
     print(ability6)
     
+    print("trace 3")
+    
     -- If the passed in ability is not nil, then add it to a table to later process
     if ability1 then counter = counter + 1; validAbis[counter] = ability1;  end
     if ability2 then counter = counter + 1; validAbis[counter] = ability2;  end
@@ -286,6 +293,8 @@ function DotaFusions:ProcessAbilityRequest(localPlayer, ability1, ability2, abil
     
     print(counter)
     
+    print("trace 4")
+    
     -- Get the ability info stored in the KV file
     for i = 1, counter do  
  
@@ -295,24 +304,32 @@ function DotaFusions:ProcessAbilityRequest(localPlayer, ability1, ability2, abil
     
     end
 
+    print("trace 5")
     -- Check to see if there are any abilities that are invalid.  If there are, then stop
     for i, v in ipairs(abiTable) do
     
         if v.name == nil then print("Invalid ability fusion: Offending ability = " .. v.content); return end
     
     end
+    
+   print("trace 6")
         
     -- Verify abilities who have special requirements.  Make sure they are valid, if not then stop
     if CheckForRequiredOptionalsAndIndexAbilities(abiTable) then print("missing abilities") return end
+   print("trace 7")
     -- Cleares the current Hero abilties.
     ClearCurrentHeroAbilities(mainHero)
+   print("trace 8")
     -- Process and add all abilities in the ability table
     for i, v in ipairs(abiTable) do   
         ProcessAbilityIntoHero(i, v, mainHero)  
     end    
+   print("trace 9")
     
     -- If there is space available, add attribute bonus
     AddAttributeBonusIfAble(mainHero)
+    
+   print("trace 10")
     
   
 end

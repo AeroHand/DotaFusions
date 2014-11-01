@@ -20,8 +20,11 @@
 
 "CustomEvents"
 {
-	"CheckHeroName"
+	"ChosenFusionHeroes"
 	{
+		"PrimaryHero"					"string"
+		"FusionHero"					"string"
+		"PlayerID"						"short"
 	}
 
 	"holdout_show_round_end_summary"

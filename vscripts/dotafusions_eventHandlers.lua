@@ -47,4 +47,32 @@ function DotaFusionsEvents.AddEventHandlers(gMode)
           end  
       
       end   
+      
+----------------------------------------------------------------------------------------------------------------------------      
+-- 
+
+   function gMode:_PlayerSpawned(event)
+   
+      print("Player Spawned")
+      
+       for key,val in pairs(event) do
+     print(key, val)
+ end
+      
+      local playerID = event.player 
+      
+      local choseFusionHero = {   
+          PrimaryHero = event.hero,
+          FusionHero = PlayerResource:GetPlayer(playerID - 1).df_fusionHero1,
+          PlayerID = playerID - 1
+        }
+        
+        print(choseFusionHero.PrimaryHero)
+        print(choseFusionHero.FusionHero)
+        print(choseFusionHero.PlayerID)
+        
+        FireGameEvent( "ChosenFusionHeroes", choseFusionHero )
+         
+      end  
+
 end
