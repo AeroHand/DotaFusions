@@ -1,0 +1,1541 @@
+// Dota Fusion Heroes File
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: Anti-Mage - 1
+	//=================================================================================================================
+	"npc_dota_hero_antimage_fusion"
+	{
+		"override_hero"				"npc_dota_hero_antimage"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+
+	//=================================================================================================================
+	// HERO: Abaddon - 2
+	//=================================================================================================================
+	"npc_dota_hero_abaddon_fusion"
+	{
+		"override_hero"				"npc_dota_hero_abaddon"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Axe - 3
+	//=================================================================================================================
+	"npc_dota_hero_axe_fusion"
+	{
+		"override_hero"				"npc_dota_hero_axe"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Bane - 4
+	//=================================================================================================================
+	"npc_dota_hero_bane_fusion"
+	{
+		"override_hero"				"npc_dota_hero_bane"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Bloodseeker - 5
+	//=================================================================================================================
+	"npc_dota_hero_bloodseeker_fusion"
+	{
+		"override_hero"				"npc_dota_hero_bloodseeker"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Crystal Maiden - 6
+	//=================================================================================================================
+	"npc_dota_hero_crystal_maiden_fusion"
+	{
+		"override_hero"				"npc_dota_hero_crystal_maiden"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Drow Ranger - 7
+	//=================================================================================================================
+	"npc_dota_hero_drow_ranger_fusion"
+	{
+		"override_hero"				"npc_dota_hero_drow_ranger"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Earthshaker - 8
+	//=================================================================================================================
+	"npc_dota_hero_earthshaker_fusion"
+	{
+		"override_hero"				"npc_dota_hero_earthshaker"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Juggernaut - 9
+	//=================================================================================================================
+	"npc_dota_hero_juggernaut_fusion"
+	{
+		"override_hero"				"npc_dota_hero_juggernaut"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Mirana - 10
+	//=================================================================================================================
+	"npc_dota_hero_mirana_fusion"
+	{
+		"override_hero"				"npc_dota_hero_mirana"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Nevermore - 11
+	//=================================================================================================================
+	"npc_dota_hero_nevermore_fusion"
+	{
+		"override_hero"				"npc_dota_hero_nevermore"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Morphling - 12
+	//=================================================================================================================
+	"npc_dota_hero_morphling_fusion"
+	{
+		"override_hero"				"npc_dota_hero_morphling"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Phantom Lancer - 13
+	//=================================================================================================================
+	"npc_dota_hero_phantom_lancer_fusion"
+	{
+		"override_hero"				"npc_dota_hero_phantom_lancer"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Puck - 14
+	//=================================================================================================================
+	"npc_dota_hero_puck_fusion"
+	{
+		"override_hero"				"npc_dota_hero_puck"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Pudge - 15
+	//=================================================================================================================
+	"npc_dota_hero_pudge_fusion"
+	{
+		"override_hero"				"npc_dota_hero_pudge"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Razor - 16
+	//=================================================================================================================
+	"npc_dota_hero_razor_fusion"
+	{
+		"override_hero"				"npc_dota_hero_razor"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Sand King - 17
+	//=================================================================================================================
+	"npc_dota_hero_sand_king_fusion"
+	{
+		"override_hero"				"npc_dota_hero_sand_king"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Storm Spirit - 18
+	//=================================================================================================================
+	"npc_dota_hero_storm_spirit_fusion"
+	{
+		"override_hero"				"npc_dota_hero_storm_spirit"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Sven - 19
+	//=================================================================================================================
+	"npc_dota_hero_sven_fusion"
+	{
+		"override_hero"				"npc_dota_hero_sven"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Tiny - 20
+	//=================================================================================================================
+	"npc_dota_hero_tiny_fusion"
+	{
+		"override_hero"				"npc_dota_hero_tiny"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Vengeful Spirit - 21
+	//=================================================================================================================
+	"npc_dota_hero_vengefulspirit_fusion"
+	{
+		"override_hero"				"npc_dota_hero_vengefulspirit"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Windrunner - 22
+	//=================================================================================================================
+	"npc_dota_hero_windrunner_fusion"
+	{
+		"override_hero"				"npc_dota_hero_windrunner"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Zuus - 23
+	//=================================================================================================================
+	"npc_dota_hero_zuus_fusion"
+	{
+		"override_hero"				"npc_dota_hero_zuus"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Kunkka - 24
+	//=================================================================================================================
+	"npc_dota_hero_kunkka_fusion"
+	{
+		"override_hero"				"npc_dota_hero_kunkka"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Lina - 25
+	//=================================================================================================================
+	"npc_dota_hero_lina_fusion"
+	{
+		"override_hero"				"npc_dota_hero_lina"
+		"AbilityLayout"				"6"
+		//"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Lich - 26
+	//=================================================================================================================
+	"npc_dota_hero_lich_fusion"
+	{
+		"override_hero"				"npc_dota_hero_lich"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Lion - 27
+	//=================================================================================================================
+	"npc_dota_hero_lion_fusion"
+	{
+		"override_hero"				"npc_dota_hero_lion"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Shadow Shaman - 28
+	//=================================================================================================================
+	"npc_dota_hero_shadow_shaman_fusion"
+	{
+		"override_hero"				"npc_dota_hero_shadow_shaman"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Slardar - 29
+	//=================================================================================================================
+	"npc_dota_hero_slardar_fusion"
+	{
+		"override_hero"				"npc_dota_hero_slardar"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Tidehunter - 30
+	//=================================================================================================================
+	"npc_dota_hero_tidehunter_fusion"
+	{
+		"override_hero"				"npc_dota_hero_tidehunter"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Witch Doctor - 31
+	//=================================================================================================================
+	"npc_dota_hero_witch_doctor_fusion"
+	{
+		"override_hero"				"npc_dota_hero_witch_doctor"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Riki - 32
+	//=================================================================================================================
+	"npc_dota_hero_riki_fusion"
+	{
+		"override_hero"				"npc_dota_hero_riki"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Enigma - 33
+	//=================================================================================================================
+	"npc_dota_hero_enigma_fusion"
+	{
+		"override_hero"				"npc_dota_hero_enigma"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Tinker - 34
+	//=================================================================================================================
+	"npc_dota_hero_tinker_fusion"
+	{
+		"override_hero"				"npc_dota_hero_tinker"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Sniper - 35
+	//=================================================================================================================
+	"npc_dota_hero_sniper_fusion"
+	{
+		"override_hero"				"npc_dota_hero_sniper"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Necrolyte - 36
+	//=================================================================================================================
+	"npc_dota_hero_necrolyte_fusion"
+	{
+		"override_hero"				"npc_dota_hero_necrolyte"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Warlock - 37
+	//=================================================================================================================
+	"npc_dota_hero_warlock_fusion"
+	{
+		"override_hero"				"npc_dota_hero_warlock"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Beastmaster - 38
+	//=================================================================================================================
+	"npc_dota_hero_beastmaster_fusion"
+	{
+		"override_hero"				"npc_dota_hero_beastmaster"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Queen of Pain - 39
+	//=================================================================================================================
+	"npc_dota_hero_queenofpain_fusion"
+	{
+		"override_hero"				"npc_dota_hero_queenofpain"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Venomancer - 40
+	//=================================================================================================================
+	"npc_dota_hero_venomancer_fusion"
+	{
+		"override_hero"				"npc_dota_hero_venomancer"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Faceless Void - 41
+	//=================================================================================================================
+	"npc_dota_hero_faceless_void"
+	{
+		"override_hero"				"npc_dota_hero_faceless_void"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Wraith King - 42
+	//=================================================================================================================
+	"npc_dota_hero_skeleton_king_fusion"
+	{
+		"override_hero"				"npc_dota_hero_skeleton_king"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Death Prophet - 43
+	//=================================================================================================================
+	"npc_dota_hero_death_prophet_fusion"
+	{
+		"override_hero"				"npc_dota_hero_death_prophet"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Phantom Assassin - 44
+	//=================================================================================================================
+	"npc_dota_hero_phantom_assassin_fusion"
+	{
+		"override_hero"				"npc_dota_hero_phantom_assassin"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Pugns - 45
+	//=================================================================================================================
+	"npc_dota_hero_pugna_fusion"
+	{
+		"override_hero"				"npc_dota_hero_pugna"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Templar Assassin - 46
+	//=================================================================================================================
+	"npc_dota_hero_templar_assassin_fusion"
+	{
+		"override_hero"				"npc_dota_hero_templar_assassin"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Viper - 47
+	//=================================================================================================================
+	"npc_dota_hero_viper_fusion"
+	{
+		"override_hero"				"npc_dota_hero_viper"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Luna - 48
+	//=================================================================================================================
+	"npc_dota_hero_luna_fusion"
+	{
+		"override_hero"				"npc_dota_hero_luna"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Dragon Knight - 49
+	//=================================================================================================================
+	"npc_dota_hero_dragon_knight_fusion"
+	{
+		"override_hero"				"npc_dota_hero_dragon_knight"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Dazzle - 50
+	//=================================================================================================================
+	"npc_dota_hero_dazzle_fusion"
+	{
+		"override_hero"				"npc_dota_hero_dazzle"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Rattletrap - 51
+	//=================================================================================================================
+	"npc_dota_hero_rattletrap_fusion"
+	{
+		"override_hero"				"npc_dota_hero_rattletrap"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Leshrac - 52
+	//=================================================================================================================
+	"npc_dota_hero_leshrac_fusion"
+	{
+		"override_hero"				"npc_dota_hero_leshrac"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Furion - 53
+	//=================================================================================================================
+	"npc_dota_hero_furion_fusion"
+	{
+		"override_hero"				"npc_dota_hero_furion"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Life Stealer - 54
+	//=================================================================================================================
+	"npc_dota_hero_life_stealer_fusion"
+	{
+		"override_hero"				"npc_dota_hero_life_stealer"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Dark Seer - 55
+	//=================================================================================================================
+	"npc_dota_hero_dark_seer_fusion"
+	{
+		"override_hero"				"npc_dota_hero_dark_seer"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Clinkz - 56
+	//=================================================================================================================
+	"npc_dota_hero_clinkz_fusion"
+	{
+		"override_hero"				"npc_dota_hero_clinkz"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Omniknight - 57
+	//=================================================================================================================
+	"npc_dota_hero_omniknight_fusion"
+	{
+		"override_hero"				"npc_dota_hero_omniknight"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Enchantress - 58
+	//=================================================================================================================
+	"npc_dota_hero_enchantress_fusion"
+	{
+		"override_hero"				"npc_dota_hero_enchantress"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Huskar - 59
+	//=================================================================================================================
+	"npc_dota_hero_huskar_fusion"
+	{
+		"override_hero"				"npc_dota_hero_huskar"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Night Stalker - 60
+	//=================================================================================================================
+	"npc_dota_hero_night_stalker_fusion"
+	{
+		"override_hero"				"npc_dota_hero_night_stalker"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Broodmother - 61
+	//=================================================================================================================
+	"npc_dota_hero_broodmother_fusion"
+	{
+		"override_hero"				"npc_dota_hero_broodmother"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Bounty Hunter - 62
+	//=================================================================================================================
+	"npc_dota_hero_bounty_hunter_fusion"
+	{
+		"override_hero"				"npc_dota_hero_bounty_hunter"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Weaver - 63
+	//=================================================================================================================
+	"npc_dota_hero_weaver_fusion"
+	{
+		"override_hero"				"npc_dota_hero_weaver"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Jakiro - 64
+	//=================================================================================================================
+	"npc_dota_hero_jakiro_fusion"
+	{
+		"override_hero"				"npc_dota_hero_jakiro"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Batrider - 65
+	//=================================================================================================================
+	"npc_dota_hero_batrider_fusion"
+	{
+		"override_hero"				"npc_dota_hero_batrider"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Chen - 66
+	//=================================================================================================================
+	"npc_dota_hero_chen_fusion"
+	{
+		"override_hero"				"npc_dota_hero_chen"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Spectre - 67
+	//=================================================================================================================
+	"npc_dota_hero_spectre_fusion"
+	{
+		"override_hero"				"npc_dota_hero_spectre"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Doom Bringer - 68
+	//=================================================================================================================
+	"npc_dota_hero_doom_bringer_fusion"
+	{
+		"override_hero"				"npc_dota_hero_doom_bringer"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Ancient Apparition - 69
+	//=================================================================================================================
+	"npc_dota_hero_ancient_apparition_fusion"
+	{
+		"override_hero"				"npc_dota_hero_ancient_apparition"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Ursa - 70
+	//=================================================================================================================
+	"npc_dota_hero_ursa_fusion"
+	{
+		"override_hero"				"npc_dota_hero_ursa"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Spirit Breaker - 71
+	//=================================================================================================================
+	"npc_dota_hero_spirit_breaker_fusion"
+	{
+		"override_hero"				"npc_dota_hero_spirit_breaker"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Gyrocopter - 72
+	//=================================================================================================================
+	"npc_dota_hero_gyrocopter_fusion"
+	{
+		"override_hero"				"npc_dota_hero_gyrocopter"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Alchemist - 73
+	//=================================================================================================================
+	"npc_dota_hero_alchemist_fusion"
+	{
+		"override_hero"				"npc_dota_hero_alchemist"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Invoker - 74
+	//=================================================================================================================
+	"npc_dota_hero_invoker_fusion"
+	{
+		"override_hero"				"npc_dota_hero_invoker"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability7"					"fusion_invoker_invoke"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Silencer - 75
+	//=================================================================================================================
+	"npc_dota_hero_silencer_fusion"
+	{
+		"override_hero"				"npc_dota_hero_silencer"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Obsidian Destroyer - 76
+	//=================================================================================================================
+	"npc_dota_hero_obsidian_destroyer_fusion"
+	{
+		"override_hero"				"npc_dota_hero_obsidian_destroyer"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Lycan - 77
+	//=================================================================================================================
+	"npc_dota_hero_lycan_fusion"
+	{
+		"override_hero"				"npc_dota_hero_lycan"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Brewmaster - 78
+	//=================================================================================================================
+	"npc_dota_hero_brewmaster_fusion"
+	{
+		"override_hero"				"npc_dota_hero_brewmaster"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Shadow Demon - 79
+	//=================================================================================================================
+	"npc_dota_hero_shadow_demon_fusion"
+	{
+		"override_hero"				"npc_dota_hero_shadow_demon"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Lone Druid - 80
+	//=================================================================================================================
+	"npc_dota_hero_lone_druid_fusion"
+	{
+		"override_hero"				"npc_dota_hero_lone_druid"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Chaos Knight - 81
+	//=================================================================================================================
+	"npc_dota_hero_chaos_knight_fusion"
+	{
+		"override_hero"				"npc_dota_hero_chaos_knight"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Meepo - 82
+	//=================================================================================================================
+	"npc_dota_hero_meepo_fusion"
+	{
+		"override_hero"				"npc_dota_hero_meepo"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		//"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Treant Protector - 83
+	//=================================================================================================================
+	"npc_dota_hero_treant_fusion"
+	{
+		"override_hero"				"npc_dota_hero_treant"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Ogre Magi - 84
+	//=================================================================================================================
+	"npc_dota_hero_ogre_magi_fusion"
+	{
+		"override_hero"				"npc_dota_hero_ogre_magi"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Undying - 85
+	//=================================================================================================================
+	"npc_dota_hero_undying_fusion"
+	{
+		"override_hero"				"npc_dota_hero_undying"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Rubick - 86
+	//=================================================================================================================
+	"npc_dota_hero_rubick_fusion"
+	{
+		"override_hero"				"npc_dota_hero_rubick"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Disruptor - 87
+	//=================================================================================================================
+	"npc_dota_hero_disruptor_fusion"
+	{
+		"override_hero"				"npc_dota_hero_disruptor"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Nyx Assassin - 88
+	//=================================================================================================================
+	"npc_dota_hero_nyx_assassin_fusion"
+	{
+		"override_hero"				"npc_dota_hero_nyx_assassin"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Naga Siren - 89
+	//=================================================================================================================
+	"npc_dota_hero_naga_siren_fusion"
+	{
+		"override_hero"				"npc_dota_hero_naga_siren"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Keeper of the Light - 90
+	//=================================================================================================================
+	"npc_dota_hero_keeper_of_the_light_fusion"
+	{
+		"override_hero"				"npc_dota_hero_keeper_of_the_light"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Wisp - 91
+	//=================================================================================================================
+	"npc_dota_hero_wisp_fusion"
+	{
+		"override_hero"				"npc_dota_hero_wisp"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Visage - 92
+	//=================================================================================================================
+	"npc_dota_hero_visage_fusion"
+	{
+		"override_hero"				"npc_dota_hero_visage"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		//"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Slark - 93
+	//=================================================================================================================
+	"npc_dota_hero_slark_fusion"
+	{
+		"override_hero"				"npc_dota_hero_slark"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Medusa - 94
+	//=================================================================================================================
+	"npc_dota_hero_medusa_fusion"
+	{
+		"override_hero"				"npc_dota_hero_medusa"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Troll Warlord - 95
+	//=================================================================================================================
+	"npc_dota_hero_troll_warlord_fusion"
+	{
+		"override_hero"				"npc_dota_hero_troll_warlord"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Centaur Warlord - 96
+	//=================================================================================================================
+	"npc_dota_hero_centaur_fusion"
+	{
+		"override_hero"				"npc_dota_hero_centaur"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Magnus - 97
+	//=================================================================================================================
+	"npc_dota_hero_magnataur_fusion"
+	{
+		"override_hero"				"npc_dota_hero_magnataur"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Timbersaw - 98
+	//=================================================================================================================
+	"npc_dota_hero_shredder_fusion"
+	{
+		"override_hero"				"npc_dota_hero_shredder"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Bristleback - 99
+	//=================================================================================================================
+	"npc_dota_hero_bristleback_fusion"
+	{
+		"override_hero"				"npc_dota_hero_bristleback"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Tusk - 100
+	//=================================================================================================================
+	"npc_dota_hero_tusk_fusion"
+	{
+		"override_hero"				"npc_dota_hero_tusk"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Skywratch Mage - 101
+	//=================================================================================================================
+	"npc_dota_hero_skywrath_mage_fusion"
+	{
+		"override_hero"				"npc_dota_hero_skywrath_mage"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Elder Titan - 102
+	//=================================================================================================================
+	"npc_dota_hero_elder_titan_fusion"
+	{
+		"override_hero"				"npc_dota_hero_elder_titan"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Legion Commander - 103
+	//=================================================================================================================
+	"npc_dota_hero_legion_commander_fusion"
+	{
+		"override_hero"				"npc_dota_hero_legion_commander"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Ember Spirit - 104
+	//=================================================================================================================
+	"npc_dota_hero_ember_spirit_fusion"
+	{
+		"override_hero"				"npc_dota_hero_ember_spirit"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		//"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Earth Spirit - 105
+	//=================================================================================================================
+	"npc_dota_hero_earth_spirit_fusion"
+	{
+		"override_hero"				"npc_dota_hero_earth_spirit"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Abyssal Underlord - 106
+	//=================================================================================================================
+	"npc_dota_hero_abyssal_underlord_fusion"
+	{
+		"override_hero"				"npc_dota_hero_abyssal_underlord"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Terrorblade - 107
+	//=================================================================================================================
+	"npc_dota_hero_terrorblade_fusion"
+	{
+		"override_hero"				"npc_dota_hero_terrorblade"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+		"ProjectileSpeed" "1000" 
+		"ProjectileModel" "luna_base_attack"
+	}
+	
+	//=================================================================================================================
+	// HERO: Phoenix - 108
+	//=================================================================================================================
+	"npc_dota_hero_phoenix_fusion"
+	{
+		"override_hero"				"npc_dota_hero_phoenix"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	//=================================================================================================================
+	// HERO: Oracle - 109
+	//=================================================================================================================
+	"npc_dota_hero_oracle_fusion"
+	{
+		"override_hero"				"npc_dota_hero_oracle"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+	
+	
+	//=================================================================================================================
+	// HERO: Techies - 110
+	//=================================================================================================================
+	"npc_dota_hero_techies_fusion"
+	{
+		"override_hero"				"npc_dota_hero_techies"
+		"AbilityLayout"				"6"
+		"Ability12"					"lina_fiery_soul"
+		"Ability14"					"visage_soul_assumption"
+		"Ability15"					"ember_spirit_fire_remnant"	
+		"Ability13"					"meepo_divided_we_stand"
+	}
+}
