@@ -147,7 +147,7 @@
 			visible = false;
 			
 			// Create Fountain timer
-			var fountainCheckTimer = new Timer(500);
+			fountainCheckTimer = new Timer(500);
 			fountainCheckTimer.addEventListener(TimerEvent.TIMER, ShowHideBasedOnFountainRange,false, 0, true);
 			fountainCheckTimer.start();
 			
@@ -172,7 +172,7 @@
 			var abilitiesArray:Array = f_Panel.GetCombinedAbilityNames();
 			
 			
-			gameAPI.SendServerCommand( "PlayerSendFusionAbilityRequest "  + abilitiesArray[0] + " " + abilitiesArray[1] + " " + abilitiesArray[2] + " " + abilitiesArray[3] + " " + abilitiesArray[4] + " " + abilitiesArray[5])
+			gameAPI.SendServerCommand( "PlayerSendFusionAbilityRequest "  + globals.Players.GetLocalPlayer() + " " + abilitiesArray[0] + " " + abilitiesArray[1] + " " + abilitiesArray[2] + " " + abilitiesArray[3] + " " + abilitiesArray[4] + " " + abilitiesArray[5])
 			
 			MainPanel(f_Panel).visible = false;
 			
@@ -197,7 +197,16 @@
 				trace(fusionHero);
 				trace(primaryHero);
 				
-				CreateAbilityInitData();
+				if(primaryHero == fusionHero)
+				{
+					fountainCheckTimer.stop();
+					gameAPI.SendServerCommand( "EnableHiddenAbilitiesForSoloHeroes " + e.PlayerID);
+					visible = false;
+				}
+				else
+				{
+					CreateAbilityInitData();
+				}
 			}
 		}
 		
@@ -207,6 +216,13 @@
 			
 			if( playerID == -1)
 				return
+			
+			if(primaryHero == null || fusionHero == null)
+			{
+				var heroName:String = globals.Players.GetPlayerSelectedHero(playerID);
+				if(heroName != "" && heroName != null) 
+					gameAPI.SendServerCommand( "PlayerWantToKnowHeroSelection " + playerID);
+			}
 			
 			if (globals.Entities.IsInRangeOfFountain( globals.Players.GetPlayerHeroEntityIndex(playerID )))
 			{

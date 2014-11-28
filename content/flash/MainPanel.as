@@ -985,6 +985,9 @@
 			else if (abilityName == "fusion_divided_we_stand_hidden")
 				return "meepo_divided_we_stand";
 			
+			else if (abilityName == "fusion_lina_fiery_soul")
+				return "lina_fiery_soul";
+			
 			else
 				return abilityName;
 		}

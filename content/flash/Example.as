@@ -99,6 +99,8 @@
 
 			// Get reference to the hidden select button
 			var selectButton: MovieClip = getDock().selectButton;
+			// Get reference to the hidden select grid button
+			var gridSelectButton: MovieClip = getDock().selectButton_Grid;
 			// Get the name of the hero
 			var selFusionHero: String = globals.Loader_shared_heroselectorandloadout.movieClip.heroDock.selectButton.textField.text;
 			
@@ -133,17 +135,25 @@
 
 			// Double make sure the select button is visible.
 			selectButton.removeChild(selectButton.mask);
-			selectButton.visible = true	;
+			//selectButton.visible = true	;
 			selectButton.enabled = true	;
+			
+			// same with the grid select button
+			gridSelectButton.removeChild(gridSelectButton.mask);
+			gridSelectButton.visible = true	;
+			gridSelectButton.enabled = true	;
 			
 			// Set the Hero dock to enable the player to choose his/her primary hero
 			setHeroDockVisibility(false)
 			
 			// Add the select button again so it refreshes
 			selectButton.parent.addChild(selectButton);
+			gridSelectButton.parent.addChild(gridSelectButton);
+			
+			selectButton.visible = false;
 			
 			// Tell the server that this player chose a fusion hero and send that info.
-			gameAPI.SendServerCommand("PlayerChoseFusionHero " + heroNameKV[selFusionHero]);
+			gameAPI.SendServerCommand("PlayerChoseFusionHero " + heroNameKV[selFusionHero] + " " + globals.Players.GetLocalPlayer());
 					
 		}
 
